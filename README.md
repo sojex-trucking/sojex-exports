@@ -32,3 +32,9 @@ Deploy to any Node-compatible Next.js host. Run `npm run build`, configure the r
 ## Content operations
 
 Replace or license photography as required. Add reviews only with customer authorization. Confirm all product claims, shipping terms, compliance documents and order-specific estimates in writing.
+
+## Canonical website origin
+
+Copy `.env.example` to `.env.local` for local development. Set `NEXT_PUBLIC_SITE_URL` to the actual HTTPS origin before deployment (for example, `https://sojexexports.com` once the domain is configured). The development fallback is `http://localhost:3000`.
+
+The seven-slide carousel has mobile navigation and pause controls; product-card quote buttons prefill the product field. A successful npm production build and browser inspection are still required before launch.
