@@ -13,10 +13,12 @@ body { background: #f7f7f5; color: #20252b; }
 .btn-orange:hover { background: #e84810; }
 .btn-outline { border: 1px solid currentColor; }
 .card { background: white; border: 1px solid #e2e5e7; }
-.carousel-control { display: grid; width: 2.75rem; height: 2.75rem; flex: 0 0 2.75rem; place-items: center; border: 1px solid rgb(255 255 255 / .5); color: white; transition: .2s; }
+.carousel-control { display: grid; width: 2.35rem; height: 2.35rem; flex: 0 0 2.35rem; place-items: center; border: 1px solid rgb(255 255 255 / .5); color: white; transition: .2s; }
 .carousel-control:hover { border-color: #ff5a1f; background: #ff5a1f; }
 @keyframes fadeIn { from { opacity: .45; transform: scale(1.015); } to { opacity: 1; transform: scale(1); } }
 .focusable:focus-visible, a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible { outline: 3px solid #ff5a1f; outline-offset: 3px; }
 .skip-link { position: fixed; left: 1rem; top: -6rem; z-index: 100; padding: .75rem 1rem; background: white; color: #0b1623; font-weight: 800; }
 .skip-link:focus { top: 1rem; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
+
+@media (min-width: 640px) { .carousel-control { width: 2.75rem; height: 2.75rem; flex-basis: 2.75rem; } }

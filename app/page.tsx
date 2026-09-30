@@ -26,7 +26,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="container-x py-20 sm:py-24">
+      <section className="container-x py-14 sm:py-24">
         <Heading
           eyebrow="Two capabilities. One partner."
           title="Garments and equipment receive equal focus."
@@ -47,7 +47,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-soft py-20 sm:py-24">
+      <section className="bg-soft py-14 sm:py-24">
         <div className="container-x">
           <Heading
             eyebrow="Custom products"
@@ -62,7 +62,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="container-x grid gap-12 py-20 sm:py-24 lg:grid-cols-2 lg:items-center">
+      <section className="container-x grid gap-12 py-14 sm:py-24 lg:grid-cols-2 lg:items-center">
         <div>
           <Heading
             eyebrow="Private label development"
@@ -73,7 +73,7 @@ export default function Home() {
             Explore private label
           </Link>
         </div>
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
           {[
             [Palette, "Colors & artwork"],
             [Ruler, "Fit & specifications"],
@@ -100,7 +100,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="container-x py-20 sm:py-24">
+      <section className="container-x py-14 sm:py-24">
         <Heading eyebrow="How it works" title="Six clear stages." />
         <div className="mt-10 grid gap-px bg-gray-200 md:grid-cols-3 lg:grid-cols-6">
           {process.map((item, index) => (
@@ -159,14 +159,14 @@ function Pillar({
 }) {
   return (
     <article
-      className={`p-8 sm:p-10 ${
+      className={`p-6 sm:p-10 ${
         dark ? "bg-navy text-white" : "border bg-white"
       }`}
     >
       <p className="eyebrow">Main product pillar</p>
       <h3 className="display mt-3 text-4xl">{title}</h3>
       <ul
-        className={`my-7 grid grid-cols-2 gap-3 text-sm ${
+        className={`my-7 grid grid-cols-1 gap-3 text-sm sm:grid-cols-2 ${
           dark ? "text-white/60" : "text-gray-600"
         }`}
       >
