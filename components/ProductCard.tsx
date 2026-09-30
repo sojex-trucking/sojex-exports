@@ -1,2 +1,47 @@
-import Image from "next/image";import Link from "next/link";import {MessageCircle} from "lucide-react";import type {Product} from "@/lib/data";import {waLink} from "@/lib/config";
-export default function ProductCard({p}:{p:Product}){return <article className="card group flex h-full flex-col overflow-hidden"><div className="relative h-64 overflow-hidden bg-soft"><Image src={p.image} alt={`${p.name} product range`} fill className="object-cover transition duration-500 group-hover:scale-105" sizes="(max-width:768px) 100vw, 33vw"/><span className="absolute bottom-0 left-0 bg-navy px-3 py-2 text-[10px] font-black uppercase tracking-[.14em] text-white">Made to specification</span></div><div className="flex flex-1 flex-col p-6"><p className="eyebrow">{p.category}</p><h3 className="display mt-2 text-2xl">{p.name}</h3><p className="mt-3 min-h-12 text-sm leading-6 text-gray-600">{p.detail}</p><div className="mt-auto flex gap-2 pt-5"><Link className="btn btn-orange flex-1" href={`/request-quote?product=${encodeURIComponent(p.name)}`}>Request quote</Link><a aria-label={`WhatsApp about ${p.name}`} className="grid w-12 place-items-center border border-navy" target="_blank" rel="noopener noreferrer" href={waLink(`Hello SOJEX EXPORTS, I would like a quote for ${p.name}.`)}><MessageCircle size={18}/></a></div></div></article>}
+import Image from "next/image";
+import Link from "next/link";
+import { MessageCircle } from "lucide-react";
+import type { Product } from "@/lib/data";
+import { waLink } from "@/lib/config";
+
+export default function ProductCard({ p }: { p: Product }) {
+  return (
+    <article className="card group flex h-full flex-col overflow-hidden">
+      <div className="relative h-64 overflow-hidden bg-soft">
+        <Image
+          src={p.image}
+          alt={p.name}
+          fill
+          className="object-cover transition duration-500 group-hover:scale-105"
+          sizes="(max-width:768px) 100vw, 33vw"
+        />
+      </div>
+      <div className="flex flex-1 flex-col p-6">
+        <p className="eyebrow">{p.category}</p>
+        <h3 className="display mt-2 text-2xl">{p.name}</h3>
+        <p className="mt-3 min-h-12 text-sm leading-6 text-gray-600">
+          {p.detail}
+        </p>
+        <div className="mt-auto flex gap-2 pt-5">
+          <Link
+            className="btn btn-orange flex-1"
+            href={`/request-quote?product=${encodeURIComponent(p.name)}`}
+          >
+            Request quote
+          </Link>
+          <a
+            aria-label={`WhatsApp about ${p.name}`}
+            className="grid w-12 place-items-center border border-navy"
+            target="_blank"
+            rel="noopener noreferrer"
+            href={waLink(
+              `Hello SOJEX EXPORTS, I would like a quote for ${p.name}.`,
+            )}
+          >
+            <MessageCircle size={18} />
+          </a>
+        </div>
+      </div>
+    </article>
+  );
+}
